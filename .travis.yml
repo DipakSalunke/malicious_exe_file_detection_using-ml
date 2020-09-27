@@ -7,5 +7,8 @@ install:
 script:
 - pytest
 deploy:
-- provider: heroku
-  app: dipak-scanexe
+  matrix:
+  - provider: heroku
+    app: dipak-scanexe
+  api_key:
+    secure: ycDbJvu2H6GuBi6KqdLDnFDtJhh2c7z6QP6ngoAPA5xvQ5+2pk8oba4vTixGKuQxqAXcaxlV+cCI4ER4A0nz5TotsiNjbTFT8J9+J88XyCRdu335bGubdKf2s8A3WYZ/hLTnpJCkgxR0/mOpZwDYbBP1vIjeLV36PaUTZy1bpAucMdSxtdMEFerpg3qd+5GTYrm5mKbQS7qups237rrHxpaEO7WraEFF/SuBMmrIxXk97Hh/Mw9w+Ctdei+6ikstG3lFmF5QzngaYc3XA3Rp3dKfUb2m2uHNNEdxlT0g4rtOsyzUg6ElxhsUUCzm0VslvWMXunUnCs9plv7yAYoOV/7HYkPGGCTzOaQOPlNMpFcqqiLgveMcyxzyTIz96pC9O+2jmHA2o6KwvO6tgQkwAAAj3rI1ram2r+MpDXlRJrBWctLMP8KqoF6ZSyHXEWAQk2AII75PhJ32BggikdEFR8Zl4Isnd/mw1K3qtRz4j/xb4MeqNEomVwFAW1zSXcBzY8ywq+QwrLftkSrzdnI89bNPGFKeYiJ0+JEVM5nerbdx1l3aSE4dnI32DivnqtW06M/zWh+8VSVQFDRt3IzDsBFKBZ99rBZsMKeSO4nQiFVfntzoGrQR4PMjfmKLmTis3xIDEo3BL9JF06mSi42drbY0XLDugjiFiHVmo/DPSS4=
