@@ -44,7 +44,7 @@ def upload_file():
     
     #features =pickle.load(open('/app/classifier/features.pkl'), encoding="bytes").read()
     with open("/app/classifier/features.pkl", 'rb') as ff:
-    	features = pickle.load(ff, encoding="bytes") 
+    	features = pickle.loads(ff, encoding="bytes") 
      ##########################################
      #tweet = request.form['tweet']
      #tweet=cutit(f.filename, 12)
