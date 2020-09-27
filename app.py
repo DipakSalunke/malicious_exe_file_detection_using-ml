@@ -37,7 +37,7 @@ def upload_file():
     ##########################################
     # Load classifier
     clf = joblib.load(os.path.join(os.path.dirname(os.path.realpath(__file__)),'classifier/classifier.pkl'))
-    features =pickle.load(open('/app/classifier/features.pkl','r')).read()
+    features =pickle.load(open('/app/classifier/features.pkl')).read()
     #with open("/app/classifier/features.pkl", 'r') as ff:
     #	features = pickle.loads(ff).read()
      ##########################################
