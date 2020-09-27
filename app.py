@@ -29,28 +29,21 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-
-	
 @app.route('/uploader', methods = ['GET', 'POST'])
 def upload_file():
    if request.method == 'POST':
     f = request.files['file']
-    #print(f);
     f.save(secure_filename(f.filename))
     ##########################################
     # Load classifier
-    print("path ===",os.path.join(os.path.dirname(os.path.realpath(__file__))));
-    clf = joblib.load('/app/classifier/classifier.pkl')
-    
-    #features =pickle.load(open('/app/classifier/features.pkl'), encoding="bytes").read()
-    with open("/app/classifier/features.pkl", 'rb') as ff:
-    	features = pickle.loads(ff, encoding="bytes") 
+    clf = joblib.load(os.path.join(os.path.dirname(os.path.realpath(__file__)),'classifier/classifier.pkl'))
+    features =pickle.loads(open(os.path.join(os.path.dirname(os.path.realpath(__file__))
+                                       ,'classifier/features.pkl'),'r').read())
      ##########################################
      #tweet = request.form['tweet']
      #tweet=cutit(f.filename, 12)
-    print(type(f),"$$$$$")
     tweet =f.filename
-    print(tweet, "%%%%")
+    print(tweet);
      #########################################
     data = extract_infos(tweet)
     pe_features = map(lambda x: data[x], features)
@@ -58,6 +51,9 @@ def upload_file():
         #########################################
      #print('The file %s is %s' % (os.path.basename(sys.argv[1]),['malicious', 'legitimate'][res]))
     return render_template('result.html', prediction = ['malicious', 'legitimate'][res])
+
+	
+
 
 
 
