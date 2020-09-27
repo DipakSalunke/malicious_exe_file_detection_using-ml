@@ -38,8 +38,8 @@ def upload_file():
     # Load classifier
     clf = joblib.load(os.path.join(os.path.dirname(os.path.realpath(__file__)),'classifier/classifier.pkl'))
     #features =pickle.loads(open('/app/classifier/features.pkl','r')).read()
-    with open("/app/classifier/features.pkl", 'rb') as ff:
-    	features = pickle.loads(ff)
+    with open("/app/classifier/features.pkl", 'r') as ff:
+    	features = pickle.loads(ff).read()
      ##########################################
      #tweet = request.form['tweet']
      #tweet=cutit(f.filename, 12)
