@@ -21,19 +21,29 @@
   </head>
   <body bgcolor="#E6E6FA">
     <div class="container">
-
-    {% if prediction == "legitimate" %}
-       <center><h1 style="color: green;  font-family: 'Comic Sans MS', cursive, sans-serif;"> <div id="boxshadow">This Software is legitimate</div></h1></center>
+{% if prediction == "legitimate" %}
+       <center><h2 style="color: green;  font-family: 'Comic Sans MS', cursive, sans-serif;"> <div> Software is safe to install !  </div></h2></center>
+       <br>
        <div class="pt-5 d-none d-md-block wow fadeInRight">
        <center><a href="#"><img src="{{ url_for('static', filename="img/tick.jpg")}}" class="store-img"/> </a></center>
        </div>
+       <center><h3>Thanks for checking out our work :)</h3></center>
+       <br>
+       <div class="row">
+        <a class="btn btn-success btn-lg btn-block" href="http://dipak-scanexe.herokuapp.com/" role="button">Click To Scan More !</a>
+      </div>
     {% elif prediction == "malicious" %}
-    <center><h1 style="color: red;  font-family: 'Comic Sans MS', cursive, sans-serif; margin-right:150px;"> <div id="boxshadow">This Software is malicious</div></h1></center>
+    <center><h2 style="color: red;  font-family: 'Comic Sans MS', cursive, sans-serif; margin-right:150px;"> <div> Software is malicious !  </div></h2></center>
+    <br>
     <div class="pt-5 d-none d-md-block wow fadeInRight">
     <center><a href="#"><img src="{{ url_for('static', filename="img/cross.jpg")}}" class="store-img"/> </a></center>
     </div>
+    <center><h3>Thanks for checking out our work :)</h3></center>
+    <br>
+    <div class="row">
+      <a class="btn btn-danger btn-lg btn-block" href="http://dipak-scanexe.herokuapp.com/" role="button">Click To Scan More !</a>
+    </div>
     {% endif %}
-
 
 </container>
 
