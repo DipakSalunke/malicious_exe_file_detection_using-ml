@@ -1,9 +1,11 @@
 # Machine-Learning-approach-for-Malware-Detection
-App : 
+Check it out : 
 <br>
  https://dipak-scanexe.herokuapp.com/
  <br>
+ <br>
 OR you can use a QR scanner app on your phone :
+<br>
 <br>
 <img src="https://github.com/DipakSalunke/malicious_exe_file_detection_using_ml/blob/master/qrcode_dipak-scanexe.herokuapp.com.png" width="150" height="150"/>
 
