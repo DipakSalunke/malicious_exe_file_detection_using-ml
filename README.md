@@ -1,7 +1,7 @@
 # Machine-Learning-approach-for-Malware-Detection
-App:
-https://dipak-scanexe.herokuapp.com/
-
+App : 
+ https://dipak-scanexe.herokuapp.com/
+OR you can use a QR scanner app on your phone : ![My-app-QR-Code](https://github.com/DipakSalunke/malicious_exe_file_detection_using_ml/blob/master/qrcode_dipak-scanexe.herokuapp.com.png)
 A Machine Learning approach for classifying a file as Malicious or Legitimate.
 
 This approach tries out 6 different classification algorithms before deciding which one to use for prediction by comparing their results.
